@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/text_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guest Book"
+            android:textSize="30sp"
+            android:background="@color/black"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks for coming"
+            android:textSize="12sp"
+            android:background="@color/gray"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/text_home_title"/>
+
+        <TextView
+            android:id="@+id/text_home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Full Name"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/edit_home_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.168" />
+
+        <EditText
+            android:id="@+id/edit_home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:minWidth="240dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_home_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.158" />
+
+        <TextView
+            android:id="@+id/text_home_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message to the family"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/text_home_name"
+            app:layout_constraintLeft_toLeftOf="@id/text_home_name"/>
+        <EditText
+            android:id="@+id/edit_home_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="240dp"
+            android:hint="Sorry for your lose."
+            android:gravity="start"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:padding="25dp"
+            app:layout_constraintTop_toBottomOf="@id/text_home_message"
+            app:layout_constraintLeft_toLeftOf="@id/text_home_message"/>
+        <TextView
+            android:id="@+id/text_home_donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="donation  $"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/edit_home_message"
+            app:layout_constraintLeft_toLeftOf="@id/text_home_name"/>
+        <EditText
+            android:id="@+id/edit_home_donate"
+            android:layout_width="wrap_content"
+            android:minWidth="120dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintLeft_toRightOf="@id/text_home_donate"
+            app:layout_constraintTop_toBottomOf="@id/edit_home_message"/>
+        <Button
+            android:id="@+id/button_home_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/text_home_donate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <Button
+            android:id="@+id/button_home_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@id/button_home_save"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/button_home_attendants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Attendants"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_home_clear" />
+
+        <Button
+            android:id="@+id/button_home_donors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Donors"
+            app:layout_constraintLeft_toRightOf="@+id/button_home_attendants"
+            app:layout_constraintTop_toBottomOf="@id/button_home_clear" />
+
+        <Button
+            android:id="@+id/button_home_donation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Donation"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintLeft_toRightOf="@+id/button_home_donors"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_home_clear" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
